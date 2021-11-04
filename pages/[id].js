@@ -121,6 +121,10 @@ export default function Post({ page, blocks }) {
         <h1 className={styles.name}>
           <Text text={page.properties.Name.title} />
         </h1>
+        <div className={styles.body}>
+          <Text text={page.properties.Body.rich_text} />
+        </div>
+
         <section>
           {blocks.map((block) => (
             <Fragment key={block.id}>{renderBlock(block)}</Fragment>
